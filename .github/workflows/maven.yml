@@ -43,11 +43,16 @@ jobs:
        -DbrowserName=${{inputs.browsername}}
        -Dmaven.test.failure.ignore=true
 
+    - name: Report directory set writable permissions
+      run: |
+        chmod -R 777 ./Reports
+
 #   Report Generation
-    - name: archive report artifact
-      uses: actions/upload-artifact@v4
+    - name: Upload Extent Reports
+      uses: actions/upload-artifact@v3
       with:
         name: sparkHTML
         path: ./Reports/*.html
+        if-no-files-found: warn
 
 
