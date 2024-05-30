@@ -39,7 +39,7 @@ jobs:
         cache: maven
     - name: Build mvn using testng xml
       run: mvn clean test
-       -DXmlFile=${{inputs.xmlfilename}}
+       -Dsurefire.suiteXmlFiles=${{inputs.xmlfilename}}
        -Dmaven.test.failure.ignore=true
 
 #   Report Generation
@@ -47,6 +47,6 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: sparkHTML
-        path: ./reports/*.html
+        path: ./Reports/*.html
 
 
