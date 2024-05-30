@@ -40,7 +40,7 @@ jobs:
     - name: Build mvn using testng xml
       run: mvn clean test
        -Dsurefire.suiteXmlFiles=${{inputs.xmlfilename}}
-        -DbrowserName=${{inputs.browsername}}
+       -DbrowserName=${{inputs.browsername}}
        -Dmaven.test.failure.ignore=true
 
 #   Report Generation
