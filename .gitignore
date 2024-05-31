@@ -63,3 +63,6 @@ build/
 hs_err_pid*
 replay_pid*
 >>>>>>> c303fa6dbe98c45f741abb43b068b12548cce6f2
+
+#Reports folder
+Reports/
