@@ -52,7 +52,8 @@ public class BaseClassTest {
                 URL url;
                 try {
                     //url = new URL("http://localhost:4444/wd/hub");
-                    url = new URL("http://localhost:4444/wd/hub");
+                    url = new URL("http://192.168.1.159:4444/wd/hub");
+
                 } catch (MalformedURLException e) {
                     throw new RuntimeException(e);
                 }
@@ -82,7 +83,7 @@ public class BaseClassTest {
                 URL url;
                 try {
                     //url = new URL("http://localhost:4445/wd/hub");
-                    url = new URL("http://localhost:4444/wd/hub");
+                    url = new URL("http://192.168.1.159:4444/wd/hub");
                 } catch (MalformedURLException e) {
                     throw new RuntimeException(e);
                 }
@@ -113,7 +114,7 @@ public class BaseClassTest {
                 URL url;
                 try {
                     //url = new URL("http://localhost:4445/wd/hub");
-                    url = new URL("http://localhost:4444/wd/hub");
+                    url = new URL("http://192.168.1.159:4444/wd/hub");
                 } catch (MalformedURLException e) {
                     throw new RuntimeException(e);
                 }
