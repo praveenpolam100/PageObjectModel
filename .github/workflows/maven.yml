@@ -50,5 +50,5 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
        name: sparkHTML
-       path: ./Reports/*.html
+       path: ./reports/*.html
        if-no-files-found: warn
