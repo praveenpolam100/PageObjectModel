@@ -14,7 +14,7 @@ on:
       browsername:
         type: string
         description: 'Browser Name'
-        default: 'chrome'
+        default: 'Chrome'
       xmlfilename:
         type: string
         description: 'Enter suite xml file name'
@@ -45,16 +45,6 @@ jobs:
 
     - name: Build mvn using testng xml
       run: mvn clean test -Dsurefire.suiteXmlFiles=${{ inputs.xmlfilename }} -DbrowserName=${{ inputs.browsername }} -Dmaven.test.failure.ignore=true
-
-    - name: List project directory contents (after tests)
-      run: ls -R
-
-    - name: List Reports directory contents (after tests)
-      run: ls -R ./Reports
-
-    - name: Report directory set writable permissions
-      run: |
-        chmod -R 777 ./Reports
 
     - name: Upload Extent Reports
       uses: actions/upload-artifact@v3
