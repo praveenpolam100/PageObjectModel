@@ -14,7 +14,7 @@ on:
       browsername:
         type: string
         description: 'Browser Name'
-        default: 'Chrome'
+        default: 'chrome'
       xmlfilename:
         type: string
         description: 'Enter suite xml file name'
@@ -48,6 +48,7 @@ jobs:
 
     - name: Upload Extent Reports
       uses: actions/upload-artifact@v3
+      if: always()
       with:
        name: sparkHTML
        path: ./reports/*.html
