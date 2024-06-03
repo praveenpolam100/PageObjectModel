@@ -119,7 +119,7 @@ public class Setup implements ITestListener{
      */
     public void onStart(ITestContext context) {
 
-       String filePath =  System.getProperty("user.dir") + "//reports//" + ExtentReportManager.getReportNameWithTimeStamp();
+       String filePath =  System.getProperty("user.dir") + "/reports/" + ExtentReportManager.getReportNameWithTimeStamp();
         extentReports = ExtentReportManager.createInstance(filePath, "Automation Report", "Test Execution Report");
 
     }
